@@ -62,3 +62,19 @@ Die NC‑Matrix ist real und physikalisch korrekt:
 Ein vollständiges 6×6‑System, später erweiterbar auf 9×9‑Nutzung.
 
 LICENSE
+NC · iki1uc · Eye Brain Open
+Copyright (c) 2026 iki1uc — Alle Rechte vorbehalten.
+
+Dieses Projekt ist proprietär.
+Das Kopieren, Klonen, Forken, Verbreiten, Modifizieren oder
+kommerzielle Nutzen ist ohne schriftliche Erlaubnis verboten.
+
+Nur der Autor iki1uc darf dieses Projekt verwenden, verbreiten
+oder erweitern.
+
+Externe Nutzung nur mit expliziter Business-Lizenz.
+
+Eye Brain Open · SAM führt · DEEP macht · PC befiehlt · PQ erinnert
+Discord: wie immer · offen
+Team: open
+HALT = ZIEL · SEEK liest, ordnet, hängt an · Löscht nie

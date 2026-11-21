@@ -61,3 +61,4 @@ Die NC‑Matrix ist real und physikalisch korrekt:
 ## Ziel
 Ein vollständiges 6×6‑System, später erweiterbar auf 9×9‑Nutzung.
 
+LICENSE

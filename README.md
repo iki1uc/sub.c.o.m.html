@@ -62,6 +62,7 @@ Die NC‑Matrix ist real und physikalisch korrekt:
 Ein vollständiges 6×6‑System, später erweiterbar auf 9×9‑Nutzung.
 
 LICENSE
+
 NC · iki1uc · Eye Brain Open
 Copyright (c) 2026 iki1uc — Alle Rechte vorbehalten.
 

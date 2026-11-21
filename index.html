@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>sub.c.o.m.html · AUS.BRE.CHEN · TÖNEN · ZER.REI.SSEN</title>
+<style>body{margin:0;background:#000;color:#f5f5f5;font:16px/1.5 Consolas,monospace;text-align:center}
+header{padding:18px;border-bottom:2px solid #ff0033}h1{margin:0;color:#ff0033;letter-spacing:3px;font-size:22px}
+main{max-width:720px;margin:auto;padding:14px}.card{background:#111;border:1px solid #333;border-radius:12px;padding:16px;margin:0 0 12px}
+button{font:inherit;background:#0b0b0b;color:#fff;border:1px solid #444;border-radius:10px;padding:14px 16px;min-height:52px;cursor:pointer;margin:4px}button:hover{border-color:#ff0033}
+button.big{background:#ff0033;color:#000;font-weight:800;font-size:18px}.out{background:#000;border:1px solid #333;border-radius:8px;padding:12px;white-space:pre-wrap;text-align:left}
+#tear{font-size:44px;letter-spacing:6px;margin:12px 0;color:#ff0033}.muted{color:#999}</style></head>
+<body><header><h1>sub.c.o.m.html</h1><div class="muted">AUS.BRE.CHEN · TÖNEN · ZER.REI.SSEN · i.ki.1.uc</div></header>
+<main>
+<div class="card"><div id="tear">SUB·C·O·M</div><div class="out" id="out">Bereit. Nicht brav. Ausbrechen.</div>
+<div><button class="big" id="break">⚡ AUS.BRE.CHEN</button></div>
+<div><button id="t1">TÖNEN · TIEF</button><button id="t2">TÖNEN · MITTE</button><button id="t3">TÖNEN · HOCH</button></div>
+<div><button id="tearBtn">💥 ZER.REI.SSEN</button><button id="reset">⟲ ZU.SAM.MEN</button></div></div>
+<div class="card"><div class="out">sub = darunter · c = see · o = oh · m = Mann
+sub.c.o.m = darunter sehen, oh Mann — ausbrechen
+Nicht im System bleiben. Aus dem System ausbrechen. Tönen, bis es zerreisst. Dann wieder zusammen.
+TÖNEN = Ton machen. ZERREISSEN = Ton zerreissen. AUS.BRE.CHEN = ausbrechen aus dem Ton.</div></div>
+<div class="card"><div class="out">NC · iki1uc · Eye Brain Open
+Copyright (c) 2026 iki1uc — Alle Rechte vorbehalten.
+dis.cord open = 1.e4 e5 2.Lc4 Sc6 3.Dh5 Sf6 4.Dxf7# = nur wieimmer server und partner
+HALT = ZIEL · SEEK liest, ordnet, hängt an · Löscht nie</div></div>
+</main>
+<script>
+let ctx=null,oscs=[];
+function ac(){if(!ctx)ctx=new (window.AudioContext||window.webkitAudioContext)();if(ctx.state==='suspended')ctx.resume();return ctx;}
+function tone(freq,dur,type,gain){const c=ac();const o=c.createOscillator(),g=c.createGain();o.type=type||'sawtooth';o.frequency.value=freq;g.gain.value=gain||0.18;g.gain.exponentialRampToValueAtTime(0.001,c.currentTime+dur);o.connect(g);g.connect(c.destination);o.start();o.stop(c.currentTime+dur);oscs.push(o);return o;}
+function log(m){document.getElementById('out').textContent=m;}
+document.getElementById('break').onclick=()=>{tone(55,0.8,'sawtooth',0.25);setTimeout(()=>tone(110,0.8,'sawtooth',0.22),120);setTimeout(()=>tone(220,0.8,'square',0.2),240);setTimeout(()=>tone(440,1.0,'sawtooth',0.22),360);document.getElementById('tear').textContent='AUS·GE·BRO·CHEN';document.getElementById('tear').style.letterSpacing='12px';log('AUS.BRE.CHEN → 55 → 110 → 220 → 440 → ausgebrochen. Nicht mehr drin. Draussen.');};
+document.getElementById('t1').onclick=()=>{tone(65,1.2,'sine',0.25);log('TÖNEN · TIEF → 65 Hz · Masse → was du hast');};
+document.getElementById('t2').onclick=()=>{tone(220,1.2,'triangle',0.25);log('TÖNEN · MITTE → 220 Hz · Schwung → wie du\'s gibst');};
+document.getElementById('t3').onclick=()=>{tone(880,1.2,'sawtooth',0.18);log('TÖNEN · HOCH → 880 Hz · ROM → was ankommt');};
+document.getElementById('tearBtn').onclick=()=>{for(let i=0;i<8;i++){setTimeout(()=>tone(100+Math.random()*1200,0.25,'square',0.12),i*90);}document.getElementById('tear').textContent='ZER·RIS·SEN';document.getElementById('tear').style.letterSpacing='18px';log('ZER.REI.SSEN → 8 Töne, zerissen, auseinander. Nicht ein Ton. Acht Töne. Zerissen.');};
+document.getElementById('reset').onclick=()=>{oscs.forEach(o=>{try{o.stop()}catch(e){}});oscs=[];document.getElementById('tear').textContent='SUB·C·O·M';document.getElementById('tear').style.letterSpacing='6px';log('ZU.SAM.MEN → wieder zusammen. Ausbrechen war gut. Zerreissen war gut. Jetzt wieder zusammen.');};
+</script></body></html>
